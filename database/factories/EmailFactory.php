@@ -2,20 +2,23 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
-class UserFactory extends Factory
+class EmailFactory extends Factory
 {
+    public function forUser(User $user): self
+    {
+        return $this->state(['user_id' => $user->id]);
+    }
+
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'phone_number' => fake()->phoneNumber(),
+            'email' => fake()->name(),
         ];
     }
 }
