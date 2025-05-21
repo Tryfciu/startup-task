@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Notifications\Notifiable;
 
 /**
+ * 
+ *
  * @property string $id
  * @property string $email
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -16,6 +18,15 @@ use Illuminate\Notifications\Notifiable;
  * @property string $user_id
  * @property-read \App\Models\User $user
  * @method static \Database\Factories\EmailFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Email whereUserId($value)
+ * @mixin \Eloquent
  */
 class Email extends Model
 {
